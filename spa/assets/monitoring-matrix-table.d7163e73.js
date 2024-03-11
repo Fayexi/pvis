@@ -1,0 +1,1 @@
+const a=[{name:"region",label:"Region",align:"center",field:e=>e.region,format:e=>`${e||""}`},{name:"date_visited",label:"Date Visited",align:"left",field:e=>e.date_visited,format:e=>`${e||""}`},{name:"created_by",label:"Created By",align:"center",field:e=>e.created_by,format:e=>`${e||""}`},{name:"action",label:"Action",align:"left",sortable:!1}];export{a as M};

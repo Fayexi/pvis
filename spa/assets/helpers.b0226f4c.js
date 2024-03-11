@@ -1,0 +1,1 @@
+import{c as l}from"./index.abf366c9.js";let t=null;const u=(e={})=>t.resolve({name:e.name||"",params:e.params||{},query:e.query||{}}).fullPath||"";var s=l(({app:e,store:r,router:o})=>{t=o,e.config.globalProperties.$helpers={getRoutePath:u}});export{s as default,u as getRoutePath};
