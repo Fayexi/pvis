@@ -1,0 +1,51 @@
+export const USER_MANAGEMENT_TABLE_COLUMNS = [
+    {
+        name: 'first_name',
+        label: 'First Name',
+        align: 'left',
+        sortable: false,
+        field: ( row ) => row.first_name,
+        format: ( val ) => `${ val || "" }`,
+    },
+    {
+        name: 'last_name',
+        label: 'Last Name',
+        align: 'left',
+        sortable: false,
+        field: ( row ) => row.last_name,
+        format: ( val ) => `${ val || "" }`,
+    },
+    {
+        name: 'email',
+        label: 'Email',
+        align: 'left',
+        sortable: false,
+        field: ( row ) => row.email,
+        format: ( val ) => `${ val || "" }`,
+    },
+    {
+        name: 'role',
+        label: 'Role',
+        align: 'left',
+        sortable: false,
+        field: ( row ) => row.role,
+        format: ( val ) => `${ val || "" }`,
+    },
+    {
+        name: 'group',
+        label: 'Group',
+        align: 'left',
+        sortable: false,
+        field: ( row ) => row.group,
+        format: ( val ) => `${ val || "" }`,
+    },
+
+    {
+        name: 'action',
+        label: 'Action',
+        align: 'center',
+        sortable: false,
+        field: ( row ) => row.action,
+        format: ( val ) => `${ val || "" }`,
+    },
+];
