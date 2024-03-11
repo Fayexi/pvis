@@ -57,8 +57,8 @@
           <div>
             <q-table
               title=""
-              :rows="tblPodRows"
-              :columns="tblPodColumns"
+              :rows="tblMatrixRows"
+              :columns="tblMatrixColumns"
               row-key="name"
               v-model:pagination="pagination"
               :rows-per-page-options="rowPerPageOptions"
@@ -102,14 +102,14 @@
                         @click="onViewReport(props.row.id)"
                       />
 
-                      <q-btn
+                      <!-- <q-btn
                         icon="history"
                         flat
                         color="red"
                         size="sm"
                         label="History"
                         @click="showHistory(props.row)"
-                      />
+                      /> -->
                     </div>
                   </q-td>
                 </q-tr>
@@ -226,7 +226,7 @@
 
 <script>
 import { ref } from 'vue'
-import { VISITATION_REPORT_TABLE_COLUMNS } from "src/utils/table-columns/visitation-report-table";
+import { MONITORING_MATRIX_TABLE_COLUMNS } from "src/utils/table-columns/monitoring-matrix-table";
 
 export default {
     data: () => ({
@@ -241,31 +241,25 @@ export default {
       ], 
       region: "", 
 
-      tblPodColumns: [
-        ...VISITATION_REPORT_TABLE_COLUMNS
+      tblMatrixColumns: [
+        ...MONITORING_MATRIX_TABLE_COLUMNS
       ], 
-      tblPodRows: [
-        { 
-          report_id: 'POD0003', 
-          date_conducted: 'April 14, 2024', 
-          actual_capacity: 200, 
-          total_pod_personnel: 100, 
-          status: 'Approved'
+      tblMatrixRows: [
+        {
+          region: 'Region III', 
+          date_visited: 'March 10, 2024',
+          created_by: 'Juan Dela Cruz', 
         },
-        { 
-          report_id: 'POD0002', 
-          date_conducted: 'March 9, 2024', 
-          actual_capacity: 150, 
-          total_pod_personnel: 30, 
-          status: 'Approved'
+        {
+          region: 'Region II', 
+          date_visited: 'March 9, 2024',
+          created_by: 'Juan Dela Cruz', 
         },
-        { 
-          report_id: 'POD0001', 
-          date_conducted: 'May 24, 2024', 
-          actual_capacity: 100, 
-          total_pod_personnel: 50, 
-          status: 'Approved'
-        },
+        {
+          region: 'Region I', 
+          date_visited: 'March 8, 2024',
+          created_by: 'Juan Dela Cruz', 
+        }
       ], 
     }),
 
@@ -282,15 +276,15 @@ export default {
         
       }, 
 
-      onCreatePod(){
-        this.$router.push({
-          name: "create-pod-visitation-report", 
-        });
-      }, 
+      // onCreatePod(){
+      //   this.$router.push({
+      //     name: "create-pod-visitation-report", 
+      //   });
+      // }, 
 
       onViewReport(){
         this.$router.push({
-          name: "view-pod-visitation-report", 
+          name: "view-monitoring-matrix", 
         });
       }, 
 

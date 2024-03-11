@@ -149,6 +149,11 @@ const routes = [
         component: () => import( 'pages/application/MonitoringMatrix.vue' )
       },
       {
+        path: 'monitoring-matrix/view-monitoring-matrix',
+        name: 'view-monitoring-matrix',
+        component: () => import( 'pages/application/MonitoringMatrix/ViewMonitoringMatrix.vue' )
+      },
+      {
         path: 'form-9745',
         name: 'form-9745',
         component: () => import( 'pages/application/FormNsff.vue' ),
